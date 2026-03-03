@@ -166,7 +166,7 @@ http://ip_public_bastion_host
 * **IPv4 CIDR : 10.100.0.0/16
 
 
-* **Klik tombol oranye:** Create VPC
+1. **Klik tombol oranye:** Create VPC
     * **VPC settings:** Pilih `VPC only`.
     * **Name tag:** Isi dengan `kantor`.
     * **IPv4 CIDR manual input:** Isi dengan `10.100.0.0/16`.
