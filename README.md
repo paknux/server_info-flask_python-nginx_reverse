@@ -206,7 +206,7 @@ http://ip_public_bastion_host
 - Lihat hasilnya di menu kiri NAT gateway
 - Lihat Elastic IPs yang dipegang di menu kiri Elastic IPs
 
-### A.5. Buat Routing Table
+### A.5. Buat Routing Table - subnet kantor-public
 1. klik menu Route table di sebelah kiri
 2. Klik tombol oranye : Create route table
 - Name : rt-kantor-public
@@ -218,13 +218,27 @@ http://ip_public_bastion_host
 - Target : pilih Internet Gateway
 - kemudian pilih igw-kantor
 
+5. di Tab Subnet associations klik tombol Edit subnet associations
+- centang kantor-public
 
+6. klik save associations
 
-
-4. Klik tombol oranye : Create route table
+### A.6. Buat Routing Table - subnet kantor-private
+1. klik menu Route table di sebelah kiri
+2. Klik tombol oranye : Create route table
 - Name : rt-kantor-private
 - VPC : pilih kantor
-5. Klik tombol oranye : Create route table
+3. Klik tombol oranye : Create route table
+4. di Tab Routes klik tombol Edit router
+- klik Add route
+- Destination : 0.0.0.0/0
+- Target : pilih NAT Gateway
+- kemudian pilih nat-kantor
+
+5. di Tab Subnet associations klik tombol Edit subnet associations
+- centang kantor-private
+
+6. klik save associations
 
 ## B. Buat SG di VPC kantor
 
