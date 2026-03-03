@@ -1,4 +1,4 @@
-## Simple Server Information - Flask & Python  
+## Simple Server Information - Flask & Python - NginX untuk Reverse Proxy
 #### Menggunakan solusi Serverless  Elastic Beanstalk di lingkungan **AWS Academy**.
 ---
 
