@@ -6,7 +6,7 @@
 
 ---
 
-## I. Persiapan Infrastruktur AWS
+## I. Persiapan
 
 Buat 2 SG:
 flaskSG : ijinkan inbound rule port 22, 5000 (Flask Python) dari anywhere-IPv4 (0.0.0.0/0).
@@ -14,10 +14,11 @@ nginxSG : ijinkan inbound rule port 22, 80 (NginX) dari anywhere-IPv4 (0.0.0.0/0
 
 
 ---
-### EC2 Server Information 
+### EC2 Internal : Server Information Flask-Python 
 
 AMI yang digunakan adalah Amazon Linux
 
+- Name : internal
 - AMI : Amazon Linux 2023 (kernel-6.1)
 - Instance type : t2.nano
 - key pair : vockey
@@ -73,8 +74,9 @@ sudo chown -R ec2-user:ec2-user /home/ec2-user/serverinfo-flask
 
 
 ---
-### EC2 NginX Reverse Proxy
+### EC2 Bastion Host : NginX Reverse Proxy
 
+- Name : bastion
 - AMI : Ubuntu Server 24.04 LTS (HVM)
 - Instance type : t2.nano
 - key pair : vockey
@@ -102,7 +104,7 @@ server {
     server_name _; # Karakter underscore berarti "tangkap semua domain"
 
     location / {
-        proxy_pass http://10.0.x.x:5000; # IP Private Information Server kita (Anazon Linux)
+        proxy_pass http://172.16.x.x:5000; # IP Private Information Server kita (Amazon Linux)
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
