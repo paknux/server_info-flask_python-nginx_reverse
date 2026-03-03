@@ -252,11 +252,11 @@ Buat di
 - VPC : kantor
 - subnet : kantor-private
 - Auto assign IP Public : Disable
-- Langkah lainnya sama dengan B.1. EC2 Internal : Server Information Flask-Python
+- Langkah lainnya sama dengan Bab I - B.1. EC2 Internal : Server Information Flask-Python
 
 ## D. Buat EC2 Bastion Host : NginX Reverse Proxy
 Buat di 
 - VPC : kantor 
 - subnet kantor-public
 - Auto assign IP Public : Enable
-- Langkah lainnya sama dengan B.2. EC2 Bastion Host : NginX Reverse Proxy
+- Langkah lainnya sama dengan Bab I - B.2. EC2 Bastion Host : NginX Reverse Proxy
