@@ -83,7 +83,7 @@ sudo chown -R ec2-user:ec2-user /home/ec2-user/serverinfo-flask
 1. Update dan install paket yang dibutuhkan
 ````
 sudo apt update
-sudo apt install nginx -y
+sudo apt install nginx links -y
 ````
 
 
