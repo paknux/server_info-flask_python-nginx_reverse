@@ -150,6 +150,15 @@ http://ip_public_bastion_host
 
 # II. Penempatan Internal Server dan Bastion Host di VPC kantor
 
+## A. Buat VPC kantor
+
+## B. Buat SG di VPC kantor
+
+Buat 2 SG di VPC kantor:
+- flaskSG-kantor : ijinkan inbound rule port 22, 5000 (Flask Python) dari anywhere-IPv4 (0.0.0.0/0).
+- nginxSG-kantor : ijinkan inbound rule port 22, 80 (NginX) dari anywhere-IPv4 (0.0.0.0/0).
+
+
 
 1. Menggunakan User Data yang akan dieksekusi pada saat pertama kali pembuatan instance EC2
 2. Jika menjadi kebijakan perusahaan (untuk penghematan dll),  mungkin perlu memasang Server MySQL (instance EC2) sendiri 
