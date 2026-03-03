@@ -146,11 +146,11 @@ Pengujian Bastion Host NginX Reverse Proxy Server
 http://ip_public_bastion_host 
 ````
 
-![Hasil Pengujian](img/hasilpengujian.png)
-
 ---
 
-## IV. Pengembangan
+# II. Penempatan Internal Server dan Bastion Host di VPC kantor
+
+
 1. Menggunakan User Data yang akan dieksekusi pada saat pertama kali pembuatan instance EC2
 2. Jika menjadi kebijakan perusahaan (untuk penghematan dll),  mungkin perlu memasang Server MySQL (instance EC2) sendiri 
 3. Menggunakan solusi Serverless (Elastic Beanstalk) untuk mendeploy PHP
