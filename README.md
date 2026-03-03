@@ -247,10 +247,8 @@ Buat 2 SG di VPC kantor:
 - flaskSG-kantor : ijinkan inbound rule port 22, 5000 (Flask Python) dari anywhere-IPv4 (0.0.0.0/0).
 - nginxSG-kantor : ijinkan inbound rule port 22, 80 (NginX) dari anywhere-IPv4 (0.0.0.0/0).
 
+## C. Buat EC2 Internal : Server Information Flask-Python 
+Buat di subnet kantor-private
 
-
-1. Menggunakan User Data yang akan dieksekusi pada saat pertama kali pembuatan instance EC2
-2. Jika menjadi kebijakan perusahaan (untuk penghematan dll),  mungkin perlu memasang Server MySQL (instance EC2) sendiri 
-3. Menggunakan solusi Serverless (Elastic Beanstalk) untuk mendeploy PHP
-4. Menggunakan Lambda dan API Gateway (migrasi ke bahasa pemrograman lain seperti Node.js)
-5. Menggunakan CloudFormation (yaml) untuk membuat stack automation
+## D. EC2 Bastion Host : NginX Reverse Proxy
+Buat di subnet kantor-public
