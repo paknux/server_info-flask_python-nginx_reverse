@@ -111,13 +111,18 @@ server {
 }
 ````
 
-3. Hapus konfigurasi default nginx
+3. buat symbolic link dari available ke enabled
+````
+sudo ln -s /etc/nginx/sites-available/reverse-proxy /etc/nginx/sites-enabled/
+````
+
+4. Hapus konfigurasi default nginx
 
 ````
 sudo rm /etc/nginx/sites-enabled/default
 ````
 
-4. Restart nginx
+5. Restart nginx
 ````
 sudo nginx -t
 sudo systemctl restart nginx
