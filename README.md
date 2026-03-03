@@ -211,7 +211,7 @@ http://ip_public_bastion_host
    - Name : rt-kantor-public
    - VPC : pilih kantor
 3. Klik tombol oranye : Create route table
-4. di Tab Routes klik tombol Edit router
+4. di Tab Routes klik tombol Edit route
    - klik Add route
    - Destination : 0.0.0.0/0
    - Target : pilih Internet Gateway
@@ -228,7 +228,7 @@ http://ip_public_bastion_host
    - Name : rt-kantor-private
    - VPC : pilih kantor
 3. Klik tombol oranye : Create route table
-4. di Tab Routes klik tombol Edit router
+4. di Tab Routes klik tombol Edit route
    - klik Add route
    - Destination : 0.0.0.0/0
    - Target : pilih NAT Gateway
@@ -238,6 +238,8 @@ http://ip_public_bastion_host
    - centang kantor-private
 
 6. klik save associations
+
+---
 
 ## B. Buat SG di VPC kantor
 
