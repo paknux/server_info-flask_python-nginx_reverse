@@ -7,8 +7,8 @@
 ## A. Persiapan
 
 Buat 2 SG:
-- flaskSG : ijinkan inbound rule port 22, 5000 (Flask Python) dari anywhere-IPv4 (0.0.0.0/0).
-- nginxSG : ijinkan inbound rule port 22, 80 (NginX) dari anywhere-IPv4 (0.0.0.0/0).
+- SG-flask : ijinkan inbound rule port 22, 5000 (Flask Python), dan ICMP dari anywhere-IPv4 (0.0.0.0/0).
+- SG-nginx : ijinkan inbound rule port 22, 80 (NginX) dari anywhere-IPv4 (0.0.0.0/0).
 
 
 ---
@@ -249,6 +249,8 @@ Buat 2 SG di VPC kantor:
 
 ## C. Buat EC2 Internal : Server Information Flask-Python 
 Buat di subnet kantor-private
+Auto assign IP Public : Disable
 
 ## D. Buat EC2 Bastion Host : NginX Reverse Proxy
 Buat di subnet kantor-public
+Auto assign IP Public : Enable
