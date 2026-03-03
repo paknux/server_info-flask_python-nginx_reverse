@@ -12,7 +12,10 @@ Buat dulu SG yang sesuai, ijinkan inbound rule port 22, 80 (web server), dan 330
 
 
 ---
-### EC2
+### EC2 Private
+
+AMI yang digunakan adalah Amazon Linux
+
 ````
 #!/bin/bash
 # 1. Update sistem dan install dependencies
