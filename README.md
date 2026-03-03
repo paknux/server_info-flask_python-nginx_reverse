@@ -175,6 +175,11 @@ http://ip_public_bastion_host
 - Availability Zone : us-east-1a
 - IPv4 subnet CIDR block : 10.100.1.0/24
 
+- klik Add new Subnet
+
+- Subnet name : kantor-private
+- Availability Zone : us-east-1a
+- IPv4 subnet CIDR block : 10.100.2.0/24
 
 - klik tombol oranye : Create Subnet
 
